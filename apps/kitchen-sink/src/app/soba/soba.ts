@@ -2,6 +2,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { extend } from 'angular-three';
 import * as THREE from 'three';
+import routes from './soba.routes';
 
 extend(THREE);
 
@@ -33,5 +34,5 @@ extend(THREE);
 	host: { class: 'soba' },
 })
 export default class Soba {
-	examples = ['basic', 'hud', 'render-texture', 'shaky', 'lod', 'decal', 'html-chart', 'lowpoly-earth', 'stars'];
+	protected examples = routes.filter((route) => !!route.path).map((route) => route.path);
 }

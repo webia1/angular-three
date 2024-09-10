@@ -112,6 +112,7 @@ export default defineConfig({
 								{ label: 'First Scene', slug: 'core/getting-started/first-scene' },
 							],
 						},
+						{ label: 'Migrate to v2', slug: 'core/migrate-v2' },
 						{
 							label: 'API',
 							collapsed: true,
@@ -150,7 +151,11 @@ export default defineConfig({
 							items: [
 								{ label: 'Directives', slug: 'core/advanced/directives' },
 								{ label: 'Portals', slug: 'core/advanced/portals' },
-								{ label: 'Routed Scene', slug: 'core/advanced/routed-scene' },
+								{
+									label: 'Routed Scene',
+									slug: 'core/advanced/routed-scene',
+									badge: { text: 'Bug', variant: 'danger' },
+								},
 								{ label: 'Performance', slug: 'core/advanced/performance' },
 							],
 						},
@@ -177,6 +182,10 @@ export default defineConfig({
 						{ label: 'Introduction', slug: 'postprocessing/introduction' },
 						{ label: 'How it works', slug: 'postprocessing/how-it-works' },
 					],
+				},
+				{
+					label: 'Demo',
+					link: 'https://demo.angularthree.org',
 				},
 			],
 		}),

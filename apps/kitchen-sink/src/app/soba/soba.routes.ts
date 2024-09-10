@@ -38,8 +38,32 @@ const routes: Routes = [
 		loadComponent: () => import('./stars/stars'),
 	},
 	{
+		path: 'skydiving',
+		loadComponent: () => import('./skydiving/skydiving'),
+	},
+	{
+		path: 'porsche',
+		loadComponent: () => import('./porsche/porsche'),
+	},
+	{
+		path: 'instances',
+		loadComponent: () => import('./instances/instances'),
+	},
+	{
+		path: 'inverted-stencil-buffer',
+		loadComponent: () => import('./inverted-stencil-buffer/inverted-stencil-buffer'),
+	},
+	{
+		path: 'simple-sound-analyser',
+		loadComponent: () => import('./simple-sound-analyser/simple-sound-analyser'),
+	},
+	{
+		path: 'starbucks',
+		loadComponent: () => import('./starbucks/starbucks'),
+	},
+	{
 		path: '',
-		redirectTo: 'basic',
+		redirectTo: 'stars',
 		pathMatch: 'full',
 	},
 ];

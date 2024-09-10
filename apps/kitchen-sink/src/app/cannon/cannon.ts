@@ -1,5 +1,10 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { extend } from 'angular-three';
+import * as THREE from 'three';
+import routes from './cannon.routes';
+
+extend(THREE);
 
 @Component({
 	standalone: true,
@@ -29,5 +34,5 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 	host: { class: 'cannon' },
 })
 export default class Cannon {
-	examples = ['basic', 'kinematic-cube', 'compound', 'chain', 'cube-heap', 'convexpolyhedron', 'monday-morning'];
+	protected examples = routes.filter((route) => !!route.path).map((route) => route.path);
 }
